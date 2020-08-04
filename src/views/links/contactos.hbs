@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div id="fondo" class="col-lg-12 text-center">
+            <img src="/img/bg-img/banner7.png" alt="logo">
+        </div>
+    </div>
+</div>
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+<div class="container h-100">
+    <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <div class="breadcrumb-content text-center">
+                <h2 class="page-title">Contáctenos</h2>
+                <legend class="page-title">Solo llena este formulario con tu mensaje para brindarte asistencia cuando
+                    antes.</legend>
+                <nav aria-label="breadcrumb">
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <div class="contact">
+                    <form class="form-horizontal" method="POST" action="/send-contact" accept-charset="utf-8">
+                        <fieldset>
+                            <legend class="text-center header"></legend>
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i>
+                                </span>
+                                <div class="col-md-8">
+                                    <label class="sr-only" for="contact-name">Nombre</label>
+                                    <input type="text" placeholder="Nombre" class="form-control" name="name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i
+                                        class="fa fa-envelope-o bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <label class="sr-only" for="contact-email">Correo</label>
+                                    <input name="email" type="email" placeholder="Correo Electónico"
+                                        class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i
+                                        class="fa fa-phone-square bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <label class="sr-only" for="contact-message">Asunto</label>
+                                    <input type="number" placeholder="Teléfono" class="form-control" name="phone"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <span class="col-md-1 col-md-offset-2 text-center"><i
+                                        class="fa fa-pencil-square-o bigicon"></i></span>
+                                <div class="col-md-8">
+                                    <textarea class="form-control" name="message"
+                                        placeholder="Ingrese su mensaje. La respuesta la recibirá por correo o teléfono en un lapso no mayor a 24H laborables"
+                                        cols="30" rows="10" required></textarea>
+                                </div>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LcF8rIZAAAAALqNUE2Vqyy2VQfEoEpvkd2zKuiR"></div>
+                                    <br/>
+                                <div class="form-group">
+                                <form action="?" method="POST">
+                                    <div class="col-md-12 text-center">
+                                        <input class="btn btn-outline-primary btn-lg" name="submit" type="submit" class="g-recaptcha" 
+                                        data-sitekey="6LcF8rIZAAAAALqNUE2Vqyy2VQfEoEpvkd2zKuiR" 
+                                        data-callback='onSubmit'>
+                                    </div>
+                                    </form>
+                                </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

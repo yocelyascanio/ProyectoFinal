@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/ico-3x3_inverso.png">
+
+    <!-- Title -->
+    <title>MI ENCARGO PTY</title>
+
+    {{!-- GOOGLE FONTS --}}
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    {{!-- BOOTSTRAP  --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    {{!-- FONT AWESONE --}}
+    <script src="https://kit.fontawesome.com/d4008d93a2.js" crossorigin="anonymous"></script>
+
+    {{!-- ESTILOS --}}
+    <link rel="stylesheet" href="/css/estilo.css">
+
+</head>
+
+<body>
+
+    {{> navigation}}
+
+    {{> messages}}
+
+    {{{ body }}}
+
+    {{> footer}}
+
+{{!-- codigo para rastrear --}}
+<script >
+ 
+     let apiUrl = 'https://zwestgroup.com/api/public/';
+
+             $(document).on('click', '#searchtracking', function(e){
+               e.preventDefault();
+                if($('#inputtracking').val() != ''){
+                 url = 'https://t.17track.net/es#nums='+$('#inputtracking').val();
+                    $('#iframetracking').html('<iframe src="'+url+'" frameborder="0"></iframe>');
+                          }
+                    else{
+                       $('#iframetracking').html('');
+                           }      
+                      $('#texttracking').html($('#inputtracking').val());
+                    })  
+    </script>
+    <style>
+		div.iframediv{
+			width: 100%;
+			border: 1px solid #ccc;
+			margin: 0;
+			padding: 0;
+		}
+		iframe{
+			width: 100%;
+			height: 550px;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+		div.other{
+			border: 1px solid #ccc;
+			margin: 0;
+			margin: 0;
+			padding: 0;
+			background: #F1F3FA;
+			position: absolute;
+			width: 96.7%;
+			height: 180px;
+			padding: 20px;
+		}
+
+		.btn-dangerPgt{
+			background:#CB1D25;
+			color:white;
+		}
+		.btn-primaryPgt{
+			background:#003764;
+			color:white;
+		}
+		.btn-primaryPgtHead{
+			background:#cb1d25;
+			color:white!important;
+			border-radius: 3px!important;
+			padding-top: 15px!important;
+			padding-bottom: 15px!important;
+			margin-top: 18px!important;
+		}
+
+		.btn-outline-dangerPgt{
+			margin-left: 5px!important;
+			background:transparent;
+			color:#cb1d25!important;
+			border-radius: 3px!important;
+			padding-top: 15px!important;
+			padding-bottom: 15px!important;
+			margin-top: 18px!important;
+			border-color: #cb1d25;
+		}
+
+		.btn-outline-dangerPgt:hover{
+			background:#cb1d25!important;
+			color:white!important;
+			border-radius: 3px!important;
+			padding-top: 15px!important;
+			padding-bottom: 15px!important;
+			margin-top: 18px!important;
+			border-color: #cb1d25!important;
+		}
+
+		.bg-primaryPgt {
+    		background-color: #cb1d25!important;
+		}
+		.bg-dangerPgt {
+    		background-color: #003764!important;
+		}
+
+		.price-banner {
+			color: #003764;
+		}
+
+		.float_ws{
+			position:fixed;
+			width:60px;
+			height:60px;
+			bottom:90px;
+			right:25px;
+			background-color:#25d366;
+			color:#FFF;
+			border-radius:50px;
+			text-align:center;
+			font-size:30px;
+			box-shadow: 2px 2px 3px #999;
+			z-index:100;
+		}
+
+		.my-float{
+			margin-top:10px;
+		}
+
+		#fbChat{
+			bottom:30px;	
+		}
+
+		.bannerPage{
+			margin-top: -2%;
+			margin-bottom: 0.5%;
+		}
+    </style>
+	  <script type="text/javascript">
+        $(document).ready(function () {
+            $("#recuperar").click(function (e) {
+                
+                e.preventDefault();
+				SELECT * FROM users WHERE email = 'recuperar'
+
+            });
+              
+        });
+    </script>
+{{!-- codigo para la calculadora --}}
+     <script type="text/javascript">
+        $(document).ready(function () {
+            $("#calc-pv-btn").click(function (e) {
+                
+                e.preventDefault();
+                largo = $('#largo').val();
+                ancho = $('#ancho').val();
+                alto = $('#alto').val();
+                peso = $('#peso').val();
+                cantidad =$('#cantidad').val();
+                libras = (peso * 2.2) * cantidad;
+                libras = libras.toFixed(2);
+                total = (largo * alto * ancho / 166) * cantidad;
+                total = total.toFixed(2);
+                total3 = total / 2.2;
+                total3 = total3.toFixed(2);
+                $('#libras').css("font-weight", "bold");
+                $('#libras').css("color", "black");
+                $('#libras').val(libras);
+                $('#resultado').css("font-weight", "bold");
+                $('#resultado').css("color", "black");
+                $('#resultado').val(total);
+                $('#resultadokg').css("font-weight", "bold");
+                $('#resultadokg').css("color", "black");
+                $('#resultadokg').val(total3);
+            });
+
+            $("#calc-pv-btn").click(function (e) {
+                
+                e.preventDefault();
+                largo = $('#largo').val();
+                ancho = $('#ancho').val();
+                alto = $('#alto').val();
+                total = (largo * alto * ancho / 1728) * cantidad;
+                total = total.toFixed(2);
+                total2 = total / 35.315
+                total2 = total2.toFixed(2);
+                $('#resultadopie').css("font-weight", "bold");
+                $('#resultadopie').css("color", "black");
+                $('#resultadopie').val(total);
+                $('#resultadomt').css("font-weight", "bold");
+                $('#resultadomt').css("color", "black");
+                $('#resultadomt').val(total2);
+
+            });
+              
+        });
+    </script>
+
+</body>
+
+</html>

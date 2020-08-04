@@ -1,0 +1,50 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                    <td>n°</td>
+                    <td>nombre</td>
+                    <td>apellido</td>
+                    <td>cedula</td>
+                    <td>fecha de nacimiento</td>
+                    <td>email</td>
+                    <td>celular</td>
+                    <td>direccion</td>
+                    <td>pais</td>
+                    <td></td>
+                    </tr>
+                </thead>
+                {{#each links}}
+                    <tbody>
+                            <tr>
+                            <td>{{id}}</td>  
+                            <td>{{nombre}}</td>  
+                            <td>{{apellido}}</td>  
+                            <td>{{cedula}}</td>  
+                            <td>{{timeago fecha_de_nacimiento}}</td>  
+                            <td>{{email}}</td>  
+                            <td>{{celular}}</td>  
+                            <td>{{direccion}}</td>  
+                            <td>{{pais}}</td>  
+                            <td>
+                                <a href="/links/delete/{{id}}" class="btb btn-danger">Borrar Usuario</a>
+                                <a href="/links/edit/{{id}}"  class="btb btn-secondary">Editar Usuario</a>
+                            </td>
+                            </tr>
+                        {{else}}
+                            <div class="col-4 mx-auto">
+                                <div class="card card-body text-center">
+                                    <p>
+                                        No Hya Links guardados aun.
+                                    </p>
+                                    <a href="/links/add">Crear Uno</a>
+                                </div>
+                            </div>
+                    </tbody>
+                 {{/each}}
+            </table>
+        </div>
+    </div>
+</div>

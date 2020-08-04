@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div id="fondo" class="col-lg-12 text-center">
+            <img src="/img/bg-img/banner3.png" alt="logo">
+        </div>
+    </div>
+</div>
+
+<div class="container h-100">
+    <div class="row h-100 align-items-center">
+        <div class="col-12">
+            <div class="breadcrumb-content text-center">
+                <h2 class="page-title">RASTREO EN TIEMPO REAL</h2>
+                <nav aria-label="breadcrumb">
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="text-center header">Por favor ingresa tu numero de rastreo o Tracking Number para localizarlo.</legend>
+                                <!--comienza aqui-->
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card card-body"> 
+                                      <div class="iframediv" id="iframetracking"><iframe src="https://t.17track.net/es#nums=inputtracking" frameborder="0"></iframe></div>
+                                    </div>
+                                  </div>
+                                  <!--termina aqui-->   
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-crosshairs bigicon"></i></span>
+                                    <div class="col-md-8">
+                                      <!--  <input id="txtTracking" name="txtTracking" type="text" placeholder="Tracking Number " class="form-control">termina aqui-->
+                                        <input name="inputtracking" id="inputtracking" type="text" class="form-control" placeholder="Ingrese su Numero de traking">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button id="searchtracking" class="btn btn-outline-primary btn-lg" data-toggle="collapse" data-target="#collapseExample" type="submit" aria-expanded="true">RASTREAR</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
